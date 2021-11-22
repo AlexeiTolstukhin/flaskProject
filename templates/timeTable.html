@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<!-- Добавить кнопки с остальными уроками и модулям, реализовать к ним хотя 1 модальное окно по образцу-->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Таблица - grid</h1>
+    <div class="row">
+        {% for item in timetable %}
+            <div class="col">
+                <h3>Какой-то день недели</h3>
+                {% for elem in item %}
+                    <div class="row">
+                        <div class="col">
+                            {% if elem == 0 %}
+                                -----
+                            {% else %}
+                                {{ elem[0] }}
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+        {% endfor %}
+
+    </div>
+</div>
+<!-- Модули -->
+<!-- Право -->
+<div class="modal fade" id="pravo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Право</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Преподаватель:</h3>
+                <p>И. Галиева</p>
+                <h5>Время:</h5>
+                <p>17:00 - 18:30</p>
+                <h5>Домашнее задание:</h5>
+                <p>Формулировка дз</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Проект -->
+<div class="modal fade" id="proekt" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Проект</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Преподаватель:</h3>
+                <p>Е.С. Новоселова </p>
+                <h5>Время:</h5>
+                <p>17:00 - 18:30</p>
+                <h5>Домашнее задание:</h5>
+                <p>Формулировка дз</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Уроки -->
+<!-- Информатика -->
+<div class="modal fade" id="infromatica" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Право</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Преподаватель:</h3>
+                <p>А.В. Толстухин</p>
+                <h5>Время:</h5>
+                <p>09:25 - 10:10</p>
+                <h5>Домашнее задание:</h5>
+                <p>Формулировка дз</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Русский -->
+<div class="modal fade" id="rus" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Русский язык</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Преподаватель:</h3>
+                <p>С.С.Колесникова</p>
+                <h5>Время:</h5>
+                <p>09:30 - 11:15</p>
+                <h5>Домашнее задание:</h5>
+                <p>Формулировка дз</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Физика -->
+<div class="modal fade" id="fiz" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Физика</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Преподаватель:</h3>
+                <p>A.A. Краснов</p>
+                <h5>Время:</h5>
+                <p>13:10 - 13:55</p>
+                <h5>Домашнее задание:</h5>
+                <p>Формулировка дз</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Алгебра -->
+<div class="modal fade" id="alg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Алгебра</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Преподаватель:</h3>
+                <p>П.A. Савичев</p>
+                <h5>Время:</h5>
+                <p>08:30 - 09:15</p>
+                <h5>Домашнее задание:</h5>
+                <p>Формулировка дз</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Немецкий язык -->
+<div class="modal fade" id="nem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Немецкий язык</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Преподаватель:</h3>
+                <p>Л.М. Хараханова</p>
+                <h5>Время:</h5>
+                <p>09:25 - 10:10</p>
+                <h5>Домашнее задание:</h5>
+                <p>Формулировка дз</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ОБЖ -->
+<div class="modal fade" id="obj" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">ОБЖ</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Преподаватель:</h3>
+                <p>Бударин</p>
+                <h5>Время:</h5>
+                <p>10:30 - 11:15</p>
+                <h5>Домашнее задание:</h5>
+                <p>Формулировка дз</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Химия -->
+<div class="modal fade" id="chem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Химия</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Преподаватель:</h3>
+                <p>Е.А. Рукасуева</p>
+                <h5>Время:</h5>
+                <p>11:25 - 12:10</p>
+                <h5>Домашнее задание:</h5>
+                <p>Формулировка дз</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Геометрия -->
+<div class="modal fade" id="geom" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Геометрия</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Преподаватель:</h3>
+                <p>П.А. Савичев</p>
+                <h5>Время:</h5>
+                <p>13:10 - 13:55</p>
+                <h5>Домашнее задание:</h5>
+                <p>Формулировка дз</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Физкультура -->
+<div class="modal fade" id="PE" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Физкультура</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Преподаватель:</h3>
+                <p>Т.С. Игнатенка</p>
+                <h5>Время:</h5>
+                <p>14:05 - 14:50</p>
+                <h5>Домашнее задание:</h5>
+                <p>Формулировка дз</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- История -->
+<div class="modal fade" id="ist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">История</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Преподаватель:</h3>
+                <p>И.С. Шумилов</p>
+                <h5>Время:</h5>
+                <p>16:05 - 16:50</p>
+                <h5>Домашнее задание:</h5>
+                <p>Формулировка дз</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ОДНК -->
+<div class="modal fade" id="odnk" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">ОДНК</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Преподаватель:</h3>
+                <p>И.С. Шумилов</p>
+                <h5>Время:</h5>
+                <p>16:05 - 16:50</p>
+                <h5>Домашнее задание:</h5>
+                <p>Формулировка дз</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- География -->
+<div class="modal fade" id="geo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">География</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Преподаватель:</h3>
+                <p>А. С. Пестич</p>
+                <h5>Время:</h5>
+                <p>8:30 - 9:15</p>
+                <h5>Домашнее задание:</h5>
+                <p>Формулировка дз</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Английский -->
+<div class="modal fade" id="ang" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Английский</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Преподаватель:</h3>
+                <p>К. А. Кузнецова</p>
+                <h5>Время:</h5>
+                <p>15:05 - 15:50</p>
+                <h5>Домашнее задание:</h5>
+                <p>Формулировка дз</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Литература -->
+<div class="modal fade" id="lit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Литература</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Преподаватель:</h3>
+                <p>Н. В. Марусяк</p>
+                <h5>Время:</h5>
+                <p>9:25 - 10:10</p>
+                <h5>Домашнее задание:</h5>
+                <p>Формулировка дз</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Биология -->
+<div class="modal fade" id="bio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Биология</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Преподаватель:</h3>
+                <p>А. Ю. Молчанов</p>
+                <h5>Время:</h5>
+                <p>13:10 - 13:55</p>
+                <h5>Домашнее задание:</h5>
+                <p>Формулировка дз</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Обществознание -->
+<div class="modal fade" id="obsh" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Обществознание</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Преподаватель:</h3>
+                <p>А. В. Толстухин</p>
+                <h5>Время:</h5>
+                <p>16:05 - 16:50</p>
+                <h5>Домашнее задание:</h5>
+                <p>Формулировка дз</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
